@@ -28,14 +28,14 @@ businessReport <- function(template = "INWTlab", resetStyleFiles = FALSE,...) {
 
     template <- system.file(
       paste0("rmarkdown/templates/business_report/", latex_template),
-      package = "IReports",
+      package = "IReports2",
       mustWork = TRUE
     )
 
     # Copy required tex/rmd files to Rmd Working Directory
     path <- system.file(
       "rmarkdown/templates/business_report/skeleton/",
-      package = "IReports",
+      package = "IReports2",
       mustWork = TRUE
       )
     

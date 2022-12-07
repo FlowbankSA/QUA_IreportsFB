@@ -4,25 +4,25 @@ author: INWTlab
 date: \today
 params:
   logo: logo.png
-  cover: cover.png
+  # cover: cover.png
   iblue: 2b4894
   igray: d4dbde
 documentclass: article
 fontsize: 10
 papersize: a4paper
 output: 
-  IReports::businessReport:
+  IReports2::businessReport:
     keep_tex: TRUE
     latex_engine: xelatex
     resetStyleFiles: FALSE
 header-includes: 
   - \newcommand{\logo}{`r gsub("_", "\\_", params$logo)`}
-  - \newcommand{\cover}{`r gsub("_", "\\_", params$cover)`}
+  # - \newcommand{\cover}{`r gsub("_", "\\_", params$cover)`}
   - \newcommand{\iblue}{`r params$iblue`}
   - \newcommand{\igray}{`r params$igray`}
 include-before:
   - \renewcommand{\contentsname}{Inhaltsverzeichnis}
-  - \renewcommand{\pagename}{Seite}
+  - \renewcommand{\pagename}{}
 ---
 
 

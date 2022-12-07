@@ -1,4 +1,4 @@
-Package: IReports
+Package: IReports2
 Type: Package
 Title: INWTlab Templates for Business Reports
 Description: This R package provides a LaTeX and RMarkdown template suitable for business

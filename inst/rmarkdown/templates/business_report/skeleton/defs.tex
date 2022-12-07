@@ -48,14 +48,14 @@
 
 
 % % % custom titlepage ----------------------------------------------------------------------------
-\newcommand\BackgroundPic{%
-	\put(0,0){%
-		\parbox[b][\paperheight]{\paperwidth}{%
-			\vfill
-			\centering
-			\includegraphics[width=\paperwidth,height=\paperheight]{\cover}%
-			\vfill
-}}}
+% \newcommand\BackgroundPic{%
+% 	\put(0,0){%
+% 		\parbox[b][\paperheight]{\paperwidth}{%
+% 			\vfill
+% 			\centering
+% 			\includegraphics[width=\paperwidth,height=\paperheight]{\cover}%
+% 			\vfill
+% }}}
 
 \makeatletter
 
@@ -63,40 +63,42 @@
 \fancypagestyle{customtitle}{
 	\lhead{}
 	\chead{}
-	\rhead{}
+	\rhead{\includegraphics{\logo} \\ \hspace{1cm} \\ Esplanade de Pont-Rouge 6 \\ P.O. Box 1303 \\ 1211
+	Geneva 26\\ Switzerland}
 	\makeatother
 	\lfoot{}
 	\cfoot{}
-	\rfoot{\includegraphics{\logo}}
+	\rfoot{}
+	
 }
 
 
 % titlepage
 \renewcommand{\maketitle}{
 	\thispagestyle{customtitle}
-	\AddToShipoutPicture*{\BackgroundPic}
-	\ClearShipoutPicture
+	% \AddToShipoutPicture*{\BackgroundPic}
+	% \ClearShipoutPicture
 	
 	\phantom{a}\hfill
-	\vspace{14cm}
+	% \vspace{14cm}
 	
 	\begin{tabular}[l]{@{}p{\textwidth}@{}}
-		\color{iblue}\headingfont\LARGE\@title\\[1em]
-		\color{iblue}\headingfont\large\@author\\[1em]
+		\color{iblue}\headingfont\large\@title\\[1em]
+		\color{iblue}\headingfont\normalsize\@author\\[1em]
 		\color{iblue}\headingfont\small\@date\\[1em]
 	\end{tabular}
 	
 	
 	
-	\clearpage
+	% \clearpage
 }
-\makeatother
+% \makeatother
 
 % % % header and footer ---------------------------------------------------------------------------
 \pagestyle{fancy}
 \lhead{}
 \chead{}
-\rhead{ \includegraphics{\logo}}
+\rhead{ \includegraphics{\logo}  \\ \hspace{1cm}}
 \makeatother
 \newlength{\myheight}
 \lfoot{}
